@@ -23,3 +23,15 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+write-box input {
+  font-size: xx-large;
+}
+
+write-box textarea {
+  font-size: large;
+}
+
+write-box button {
+  font-size: xx-large;
+}
