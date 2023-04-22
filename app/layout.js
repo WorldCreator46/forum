@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import './globals.css';
+import Navbar from './navbar';
 
 export const metadata = {
   title: 'Forum',
@@ -14,20 +14,5 @@ export default function RootLayout({ children }) {
         {children}
       </body>
     </html>
-  );
-}
-
-function Navbar() {
-  return (
-    <div className="Navbar">
-      <div className="NavTitle">
-        <h1>Forum</h1>
-      </div>
-      <div className="NavTitle">
-        <Link href={`/signin`}>
-          <button>로그인</button>
-        </Link>
-      </div>
-    </div>
   );
 }

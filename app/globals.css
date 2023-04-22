@@ -30,8 +30,13 @@ a {
 
 .p-20 {
   padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-input {
+.p-20 input {
   box-sizing: border-box;
   padding: 10px;
   display: block;
@@ -43,7 +48,7 @@ button {
   background: lightgray;
   border: none;
   border-radius: 5px;
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 .Navbar {
@@ -63,4 +68,32 @@ button {
 .signin,
 .signup {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin form {
+  width: 60%;
+  max-width: 400px;
+}
+
+.signup form {
+  width: 80%;
+  max-width: 600px;
+}
+
+.signin input,
+.signup input {
+  box-sizing: border-box;
+  padding: 10px;
+  display: block;
+  margin-bottom: 10px;
+  font-size: xx-large;
+  width: 100%;
+}
+
+.error {
+  padding-left: 30px;
 }
