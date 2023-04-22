@@ -1,26 +1,11 @@
-export default function write() {
+export default async function Write() {
   return (
-    <div className="write-box">
+    <div className="p-20">
       <h1>글작성</h1>
       <form action="/api/write" method="POST">
-        <input
-          style={{ fontSize: '25px', fontWeight: 'bold', display: 'block' }}
-          type="text"
-          name="title"
-          placeholder="제목을 입력하세요."
-          required
-        />
-        <textarea
-          style={{ fontSize: '19px', display: 'block' }}
-          name="content"
-          rows="20"
-          cols="32"
-          required
-          placeholder="글 내용을 입력하세요."
-        ></textarea>
-        <button style={{ fontSize: '19px' }} type="submit">
-          작성
-        </button>
+        <input name="title" placeholder="글제목" required />
+        <input name="content" placeholder="글내용" required />
+        <button type="submit">전송</button>
       </form>
     </div>
   );
