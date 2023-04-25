@@ -97,3 +97,7 @@ button {
 .error {
   padding-left: 30px;
 }
+
+button {
+  cursor: pointer;
+}
