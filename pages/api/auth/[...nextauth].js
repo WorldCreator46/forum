@@ -1,23 +1,19 @@
 import NextAuth from 'next-auth';
+import GoogleProvider from 'next-auth/providers/google';
 
-export const authOptions = {
-  providers: [
-    providers.Credentials({
-      id: 'id-password-credential',
-      name: 'Credentials',
-      type: 'credentials',
-      credentials: {
-        id: { label: 'Id', type: 'text' },
-        password: { label: 'Password', type: 'password' },
-      },
-      async authorize(credentialsm, req) {
-        return credentialsm;
-      },
-    }),
-  ],
-  pages: {
-    signIn: '/login',
-  },
+const nextAuthOptions = (req, res) => {
+  return {
+    providers: [
+      GoogleProvider({
+        clientId: process.env.GOOGLE_CLIENT_ID,
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      }),
+    ],
+  };
 };
 
-export default NextAuth(authOptions);
+const authHandler = (req, res) => {
+  return NextAuth(req, res, nextAuthOptions(req, res));
+};
+
+export default authHandler;
